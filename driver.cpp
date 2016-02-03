@@ -6,6 +6,7 @@
 #include <iostream>
 #include <cmath>
 #include <rarray>
+#include "../ticktock/ticktock.h"
 #include "initialize_ant.h"
 #include "time_step_ant.h"
 #include "output_time_step.h"
@@ -14,6 +15,9 @@ using namespace std;
 //MAIN//
 int main()
 {
+  // define stopwatch
+  TickTock stopwatch;
+  stopwatch.tick(); // start stopwatch
   // defining variables
   int arrsize = 356; // size of array
   int total_ants = 1010; // initial number of ants
@@ -25,17 +29,26 @@ int main()
   rarray<float,2> new_number_of_ants(arrsize,arrsize); // updated number of ants
   int time = 40; // amount of time we observe
 
+  stopwatch.tock("Time measurement:");
+  
   // initialize
   initialize_ant(arrsize,total_ants,z_cycles, velocity_of_ants, number_of_ants);
   cout << "Initialization complete. Ants are on table." << endl;
   cout << "Watching ants walk on the table..." << endl;
+
+  stopwatch.tock("Time measurement (after initialization):");
+  
   // run simulation
   for (int t=0;t<time;t++) {
     float totants = output_time_step(arrsize,t,number_of_ants,new_number_of_ants); // output number of ants on table
     time_step_ant(arrsize, d_amplitude, totants, still_ant_fraction,	\
     		  velocity_of_ants, number_of_ants, new_number_of_ants); // run through simulation to see how many ants remain
-    
+
+    stopwatch.tock("Time measurement (after timestep):");
   }
   cout << "Done! Exiting..." << endl;
+
+  stopwatch.tock("Time measurement (end):");
+  
   return 0;
 }
