@@ -1,7 +1,13 @@
 #include <cmath>
 #include <iostream>
+#include "../ticktock/ticktock.h"
+
 int main()
 {
+  // define stopwatch
+  TickTock stopwatch;
+  stopwatch.tick(); // start stopwatch
+  
   // ants walk on a table
   float number_of_ants[356][356];
   float new_number_of_ants[356][356];
@@ -31,6 +37,10 @@ int main()
       }
     }
   }
+  
+  double timestring1 = stopwatch.silent_tock();
+  std::cout << "Initialization complete: " << timestring1 << " sec elapsed" << std::endl;
+  
   // run simulation
   for (int t = 0; t < 40; t++) {
     float totants = 0.0;
@@ -40,6 +50,7 @@ int main()
       }
     }
     std::cout << t<< " " << totants << std::endl;
+    stopwatch.tock("Time measurement (after time step):");
     for (int i=0;i<356;i++) {
       for (int j=0;j<356;j++) {
 	new_number_of_ants[i][j] = 0.0;
@@ -66,6 +77,9 @@ int main()
       }
     }
   }
+  
+  double timestring2 = stopwatch.silent_tock();
+  std::cout << "Done! Total time elapsed: " << timestring2 << " sec" << std::endl;
   return 0;
 }
  
