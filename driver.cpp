@@ -28,15 +28,14 @@ int main()
   rarray<float,2> number_of_ants(arrsize,arrsize); // number of ants
   rarray<float,2> new_number_of_ants(arrsize,arrsize); // updated number of ants
   int time = 40; // amount of time we observe
-
-  stopwatch.tock("Time measurement:");
   
   // initialize
   initialize_ant(arrsize,total_ants,z_cycles, velocity_of_ants, number_of_ants);
   cout << "Initialization complete. Ants are on table." << endl;
-  cout << "Watching ants walk on the table..." << endl;
 
-  stopwatch.tock("Time measurement (after initialization):");
+  double timestring1 = stopwatch.silent_tock();
+  
+    cout << "Watching ants walk on the table... " << timestring1 << " sec elapsed"  << endl ;
   
   // run simulation
   for (int t=0;t<time;t++) {
@@ -46,9 +45,8 @@ int main()
 
     stopwatch.tock("Time measurement (after timestep):");
   }
-  cout << "Done! Exiting..." << endl;
 
-  stopwatch.tock("Time measurement (end):");
-  
+  double timestring2 = stopwatch.silent_tock();
+  cout << "Done! Exiting... " << timestring2 << " sec elapsed" << endl;  
   return 0;
 }
