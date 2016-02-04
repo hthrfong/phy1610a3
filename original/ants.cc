@@ -1,6 +1,6 @@
 #include <cmath>
 #include <iostream>
-#include "../../ticktock/ticktock.h"
+#include "../ticktock/ticktock.h"
 
 int main()
 {

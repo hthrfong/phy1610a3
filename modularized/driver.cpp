@@ -6,7 +6,7 @@
 #include <iostream>
 #include <cmath>
 #include <rarray>
-#include "../../ticktock/ticktock.h"
+#include "../ticktock/ticktock.h"
 #include "initialize_ant.h"
 #include "time_step_ant.h"
 #include "output_time_step.h"
