@@ -1,0 +1,41 @@
+commit 824c2d48bc8035695bb5c830916f5928209b80bc
+Author: Heather Fong <hfong@cita.utoronto.ca>
+Date:   Thu Feb 4 00:54:59 2016 -0500
+
+    Made log file for what I did on SciNet server
+
+ scinet_log.log |   32 ++++++++++++++++++++++++++++++++
+ 1 file changed, 32 insertions(+)
+
+commit c58a87f87920188095dfda9ca65b384864ff25d6
+Author: Heather Fong <hfong@cita.utoronto.ca>
+Date:   Wed Feb 3 21:38:08 2016 -0500
+
+    Updated Makefile to include gprof
+
+ modularized/Makefile |   10 +++++++---
+ original/Makefile    |    8 ++++++--
+ 2 files changed, 13 insertions(+), 5 deletions(-)
+
+commit 38f181bcdf2247627f9db364671adb17de83e668
+Author: Heather Fong <hfong@cita.utoronto.ca>
+Date:   Wed Feb 3 21:20:29 2016 -0500
+
+    copied files from laptop to Scinet
+
+ modularized/Makefile             |   34 +++++++
+ modularized/driver.cpp           |   54 +++++++++++
+ modularized/gmon.out             |  Bin 0 -> 2670 bytes
+ modularized/initialize_ant.cpp   |   32 ++++++
+ modularized/initialize_ant.h     |   11 +++
+ modularized/output.txt           |  198 ++++++++++++++++++++++++++++++++++++++
+ modularized/output_time_step.cpp |   30 ++++++
+ modularized/output_time_step.h   |   10 ++
+ modularized/time_step_ant.cpp    |   33 +++++++
+ modularized/time_step_ant.h      |   10 ++
+ original/Makefile                |   27 ++++++
+ original/ants.cc                 |   86 +++++++++++++++++
+ original/output.txt              |  185 +++++++++++++++++++++++++++++++++++
+ rarray                           |    1 +
+ ticktock                         |    1 +
+ 15 files changed, 712 insertions(+)
