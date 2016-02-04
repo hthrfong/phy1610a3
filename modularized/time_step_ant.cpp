@@ -23,10 +23,10 @@ void time_step_ant(int arrsize, float d_amplitude, float totants, float still_an
       }
     }
   }
-  //number_of_ants = new_number_of_ants.copy(); // make number_of_ants = new_number_of_ants
+  number_of_ants = new_number_of_ants.copy(); // make number_of_ants = new_number_of_ants
   for (int i=0;i<arrsize;i++) {
     for (int j=0;j<arrsize;j++) {
-    number_of_ants[i][j] = new_number_of_ants[i][j];
+      //number_of_ants[i][j] = new_number_of_ants[i][j];
       totants += number_of_ants[i][j]; // count up array elements to find total of ants still on table
     }
   }
