@@ -42,7 +42,8 @@ int main()
     float totants = output_time_step(arrsize,t,number_of_ants,new_number_of_ants); // output number of ants on table
     stopwatch.tock("Time measurement:");
     time_step_ant(arrsize, d_amplitude, totants, still_ant_fraction,	\
-    		  velocity_of_ants, number_of_ants, new_number_of_ants); // run through simulation to see how many ants remain
+      		  velocity_of_ants, number_of_ants, new_number_of_ants); // run through simulation to see how many ants remain
+
     double timestring2 = stopwatch.silent_tock();
     cout << timestring2 << " sec elapsed" << endl;
   }
