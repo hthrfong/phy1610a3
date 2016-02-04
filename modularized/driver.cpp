@@ -17,10 +17,7 @@ int main()
 {
   // define stopwatch
   TickTock stopwatch;
-  stopwatch.tick(); // start stopwatch
-
-  stopwatch.tock("Time measurement:");
-  
+  stopwatch.tick(); // start stopwatch  
   // defining variables
   int arrsize = 356; // size of array
   int total_ants = 1010; // initial number of ants
@@ -43,6 +40,7 @@ int main()
   // run simulation
   for (int t=0;t<time;t++) {
     float totants = output_time_step(arrsize,t,number_of_ants,new_number_of_ants); // output number of ants on table
+    stopwatch.tock("Time measurement:");
     time_step_ant(arrsize, d_amplitude, totants, still_ant_fraction,	\
     		  velocity_of_ants, number_of_ants, new_number_of_ants); // run through simulation to see how many ants remain
     double timestring2 = stopwatch.silent_tock();

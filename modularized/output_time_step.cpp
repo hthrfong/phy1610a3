@@ -20,6 +20,11 @@ float output_time_step(int arrsize, int t, rarray<float,2> &number_of_ants, \
     std::cout << "Time step" << "\t" << "Ants left" << "\t" << "Elapsed time" << std::endl; // print out headers at the beginning
   }
   std::cout << t << "\t" << remaining_ants << "\t"; // print out time and number of ants remaining at that time step
-  new_number_of_ants.fill(0.0); // reset new_number_of_ants to 0-array
+  //new_number_of_ants.fill(0.0); // reset new_number_of_ants to 0-array
+  for (int i=0;i<arrsize;i++) {
+    for (int j=0;j<arrsize;j++) {
+      new_number_of_ants[i][j] = 0.0;
+    }
+  }
   return totants;
 }

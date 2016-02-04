@@ -56,6 +56,7 @@ int main()
 	new_number_of_ants[i][j] = 0.0;
       }
     }
+    stopwatch.tock("Time measurement after output step:");
     for (int i=0;i<356;i++) {
       for (int j=0;j<356;j++) {
 	int di = 1.9*sin(velocity_of_ants[i][j]);
