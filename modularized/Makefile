@@ -33,6 +33,9 @@ gprof: driver
 	./driver
 	gprof driver > output.txt
 
+# Implement testing unit using Boost Libraries
+test: time_step_ant.h
+
 # Removes library files and executable file
 clean:
 	rm -f driver.o initialize_ant.o time_step_ant.o output_time_step.o ticktock.o driver output.txt gmon.out
