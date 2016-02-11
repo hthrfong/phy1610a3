@@ -1,0 +1,119 @@
+commit 27f0c773a459cd7854ca13116191041910e81af6
+Author: Heather Fong <hfong@cita.utoronto.ca>
+Date:   Thu Feb 11 00:47:22 2016 -0500
+
+    added blurb about why I have two git log files
+
+commit d94279eef96b86be1609cd5d1f2631c29c99c7fe
+Author: Heather Fong <hfong@cita.utoronto.ca>
+Date:   Thu Feb 11 00:43:54 2016 -0500
+
+    removed unit testing bit from profiling_report.txt and made a new file for it
+
+commit 2e0d691fa351175747460c81faf657bd19e9b59b
+Author: Heather Fong <hfong@cita.utoronto.ca>
+Date:   Thu Feb 11 00:42:57 2016 -0500
+
+    added unit testing results, was not able to fix problem with }
+
+commit ee8a76b39f7f7c478cfa725fcb4fab6eefa6f641
+Author: Heather Fong <hfong@cita.utoronto.ca>
+Date:   Thu Feb 11 00:37:17 2016 -0500
+
+    added profiling report
+
+commit 4e8c31b63ffca419ea748e76661d1f2489a5064c
+Author: Heather Fong <hfong@cita.utoronto.ca>
+Date:   Thu Feb 11 00:17:27 2016 -0500
+
+    Edited Makefile with make test, made unit testing code. there's this weird error in msgs2.cpp that keeps insisting I have unmatched }, which I can't figure out
+
+commit 7b2705b78fbce3677a869478d99835350f383d33
+Author: Heather Fong <hfong@cita.utoronto.ca>
+Date:   Wed Feb 10 23:17:01 2016 -0500
+
+    edited Makefile for gprof
+
+commit 3eb0962b3ff280796d2114fae561b5f44f99f069
+Author: Heather Fong <hfong@cita.utoronto.ca>
+Date:   Wed Feb 10 23:16:21 2016 -0500
+
+    make unit testing file for time_step_ant
+
+commit 43fdb4c3e7c0cdb97ba1114c1b516593d9b24e59
+Author: Heather Fong <hfong@cita.utoronto.ca>
+Date:   Wed Feb 10 17:49:06 2016 -0500
+
+    Added test-rule to Makefile
+
+commit d56a4f51f93462afec7607ff5e4ee13cfcb2d1d3
+Author: Heather Fong <hfong@cita.utoronto.ca>
+Date:   Thu Feb 4 01:46:21 2016 -0500
+
+    repository from laptop now works on SciNet
+
+commit c64c8c997f02b96b52e15a5c1e1e4029b74e0bae
+Author: Heather Fong <hthrfong@gmail.com>
+Date:   Thu Feb 4 01:34:11 2016 -0500
+
+    added rarray and ticktock to repository so directories consistent between laptop and SciNet
+
+commit 635106132b56fde939ac245e3f3af82d2d352f05
+Author: Heather Fong <hthrfong@gmail.com>
+Date:   Thu Feb 4 01:28:34 2016 -0500
+
+    using r.copy() instead of for loop, it's faster
+
+commit 5180d099eeba924a3b64b31986fa33abeda79493
+Author: Heather Fong <hthrfong@gmail.com>
+Date:   Thu Feb 4 00:58:10 2016 -0500
+
+    copied over Makefiles from SciNet and scinet_log.log
+
+commit c9bae418f3ee75e8dddee658835c76712711ca4b
+Author: Heather Fong <hthrfong@gmail.com>
+Date:   Thu Feb 4 00:55:07 2016 -0500
+
+    deleted these files because I separated files into ORIGINAL and MODULARIZED
+
+commit 25595857f2e27bf68f4da38ee24f8d02c90f4b74
+Author: Heather Fong <hthrfong@gmail.com>
+Date:   Wed Feb 3 21:23:09 2016 -0500
+
+    wasn't able to get gprof working on laptop, so transferred files over to Scinet
+
+commit 0b23b692b46d3ee7b22bfc5140db01a559a290cb
+Author: Heather Fong <hthrfong@gmail.com>
+Date:   Wed Feb 3 20:05:43 2016 -0500
+
+    testing the timing of each method and trying to find the bottleneck
+
+commit efa74086e646bcc84daf7ac9009cb64fbfb7a793
+Author: Heather Fong <hthrfong@gmail.com>
+Date:   Wed Feb 3 19:27:03 2016 -0500
+
+    Separated modularized and original versions into diff files. Edited code for more readable outputs
+
+commit 94c6cee8c63a0e9725109d95bac64a192e6a4bfc
+Author: Heather Fong <hthrfong@gmail.com>
+Date:   Wed Feb 3 16:09:41 2016 -0500
+
+    Implement ticktock into ants.cc
+
+commit 3440ef03b454bd26a9db0d661edab1b6bbbf5a91
+Author: Heather Fong <hthrfong@gmail.com>
+Date:   Wed Feb 3 16:00:21 2016 -0500
+
+    fixed some bugs in driver.cpp so that ticktock works properly
+
+commit 3070e804386dc38707a7e395736dd08e34784fb8
+Author: Heather Fong <hthrfong@gmail.com>
+Date:   Wed Feb 3 15:53:34 2016 -0500
+
+    Implemented ticktock into Makefile and driver.cpp to measure elapsed time
+
+commit 2ca7202d8fe94da1996f06dbedbaed03e163fbee
+Author: Heather Fong <hthrfong@gmail.com>
+Date:   Wed Feb 3 15:34:40 2016 -0500
+
+    Added files from Assignment 2 (modular implementation and ants.cc)
