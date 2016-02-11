@@ -1,6 +1,8 @@
 PHY1610, Heather Fong, February 11, 2016
 Profiling Report
 
+I have included two log reports because I did the first half of the assignment on my laptop, and then realized that I could not use gprof unless I was on SciNet. I made a new git log file while working on SciNet, and then decided it would be a better idea if I stuck with one repository instead of two. Therefore, I git cloned the repository originally on my laptop over to SciNet and continued working from there. However, the SciNet git log from before I git cloned the repository has been submitted for completeness. The log file is called "scinet_log.log".
+
 For modularized code, the bottleneck is at time_step_ant.cpp,
     between each time step: 0.0257 s
     during time_step_ant: 0.0227 s
