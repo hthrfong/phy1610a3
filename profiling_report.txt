@@ -1,0 +1,13 @@
+For modularized code, the bottleneck is at time_step_ant.cpp,
+    between each time step: 0.0257 s
+    during time_step_ant: 0.0227 s
+    between each time step (for loop): 0.0177 s
+    during time_step_ant (for loop):  0.0149 s
+Here, "for loop" means that I don't call time_step_ant.h, and instead, I simply copy and paste the time_step_ant.cpp code into driver.cpp.
+It seems that its performance is improved when I do not call the module. From the profiling output, it seems to spend the bulk of its time calling the various rarray<float,2>. As a result, when the for loop is used instead of the module, it is faster because the code doesn't need to call each rarray<float,2>.
+
+For original code, the bottleneck occurs at the same equivalent steps as the modularlized code.
+    between each time step: 0.0169 s
+    during time step stage: 0.0164 s
+
+To do the profiling, I ran "make" in their respective folders. This compiles the code and generates an "output.txt" file that shows the profiling. 
