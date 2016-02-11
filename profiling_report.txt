@@ -1,3 +1,6 @@
+PHY1610, Heather Fong, February 11, 2016
+Profiling Report
+
 For modularized code, the bottleneck is at time_step_ant.cpp,
     between each time step: 0.0257 s
     during time_step_ant: 0.0227 s
@@ -11,3 +14,6 @@ For original code, the bottleneck occurs at the same equivalent steps as the mod
     during time step stage: 0.0164 s
 
 To do the profiling, I ran "make" in their respective folders. This compiles the code and generates an "output.txt" file that shows the profiling. 
+
+***
+
