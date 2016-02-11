@@ -6,7 +6,7 @@ CXX = g++
 #GSLINC = ../rarray/ # no write permissions on /usr/include, so have to call rarray like this
 
 # Compiler and linker flags.
-CXXFLAGS = -I${GSLINC} -O2 -pg -g
+CXXFLAGS = -I${GSLINC} -O2 -pg
 LDFLAGS = -L${GSLINC}
 LDLIBS = -lgsl -lgslcblas
 TICKTOCKDIR = ../ticktock/
@@ -34,8 +34,12 @@ gprof: driver
 	gprof driver > output.txt
 
 # Implement testing unit using Boost Libraries
-test: time_step_ant.h
+msgs2.o: msgs2.cpp initialize_ant.h time_step_ant.h output_time_step.h
+	${CXX} ${CXXFLAGS} -c msgs2.cpp -o msgs2.o
+test: msgs2.o initialize_ant.o time_step_ant.o output_time_step.o 
+	${CXX} -lboost_unit_test_framework -DBOOST_TEST_DYN_LINK msgs2.o initialize_ant.o time_step_ant.o output_time_step.o -o msgs2
+	./msgs2
 
 # Removes library files and executable file
 clean:
-	rm -f driver.o initialize_ant.o time_step_ant.o output_time_step.o ticktock.o driver output.txt gmon.out
+	rm -f driver.o initialize_ant.o time_step_ant.o output_time_step.o ticktock.o driver output.txt gmon.out msgs2.o
