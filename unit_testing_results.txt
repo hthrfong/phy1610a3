@@ -1,0 +1,10 @@
+PHY1610, Heather Fong, February 11, 2016
+Unit Testing Results
+
+With regards to the text file with the results of the unit testing, I was not able to get the unit testing working because of the following error:
+g++ -I -O1 -pg -g -c msgs2.cpp -o msgs2.o
+msgs2.cpp:49:1: error: expected declaration before '}' token
+
+If I remove the } in line 48 of msgs2.cpp, I can compile without the error, but I do not get results of the unit testing (although I inserted some output messages that show the code is working properly). 
+
+
