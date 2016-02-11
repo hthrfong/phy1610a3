@@ -3,10 +3,10 @@
 
 # Define the compiler to use.
 CXX = g++
-GSLINC = ../rarray/ # no write permissions on /usr/include, so have to call rarray like this
+#GSLINC = ../rarray/ # no write permissions on /usr/include, so have to call rarray like this
 
 # Compiler and linker flags.
-CXXFLAGS = -I${GSLINC} -O2 -pg
+CXXFLAGS = -I${GSLINC} -O2 -pg -g
 LDFLAGS = -L${GSLINC}
 LDLIBS = -lgsl -lgslcblas
 TICKTOCKDIR = ../ticktock/
